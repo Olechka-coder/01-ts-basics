@@ -1,11 +1,12 @@
-function getFirstElement<T>(arr:T[]) : T {
+function getFirstElement<T>(arr: T[]): T {
   return arr[0];
 }
 
-getFirstElement([1, 2, 3]);           // 1
-getFirstElement(["a", "b", "c"]);     // "a"
-getFirstElement([true, false, true]); // true
+// явне зазначення типу
+getFirstElement<number>([1, 2, 3]);
+getFirstElement<string>(["a", "b", "c"]);
+getFirstElement<boolean>([true, false, true]);
 
-console.log(getFirstElement([1, 2, 3]));           // 1
-console.log(getFirstElement(["a", "b", "c"]));   // "a"   
-console.log(getFirstElement([true, false, true])); // true  
+console.log(getFirstElement<number>([1, 2, 3]));         // 1
+console.log(getFirstElement<string>(["a", "b", "c"]));   // "a"
+console.log(getFirstElement<boolean>([true, false, true])); // true
